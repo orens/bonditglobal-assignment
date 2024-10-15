@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "assignment.bonditglobal"
+version = "0.1.0"
+description = "BondIT Global assignment - schedule flights and verify their status"
+authors = ["Oren Shmuel <oren.shm@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+fastapi = {extras = ["standard"], version = "^0.115.2"}
+asyncio = "^3.4.3"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
