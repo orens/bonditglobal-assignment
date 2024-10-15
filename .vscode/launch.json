@@ -10,7 +10,7 @@
             "request": "launch",
             "python": "${workspaceFolder}/.venv/bin/python",
             "module": "cli",
-            "args": ["update-dataset", "input.csv", "output.01.csv"],
+            "args": ["update-dataset", "samplefiles/input.csv", "samplefiles/output.01.csv"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
         },
@@ -20,7 +20,7 @@
             "request": "launch",
             "python": "${workspaceFolder}/.venv/bin/python",
             "module": "cli",
-            "args": ["update-dataset", "sample.csv", "output.01.csv"],
+            "args": ["update-dataset", "samplefiles/sample.csv", "samplefiles/output.01.csv"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
         },
