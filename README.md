@@ -35,20 +35,20 @@ or, for release mode:
 ```
 
 ## Design considerations
-# Database
+### Database
 Since a CSV implementation is required in the assignment, and due to time limitations, I decided to use at as a base layer for the database of the server.
 This had some major drawbacks. Namely, locking of the database (see "locking") below and performance.
 
-# Database writes
+### Database writes
 Since I wanted persistency even in case of a fault, I wrote the entire file on every POST. If I had more time for it, I would have elected to go with a database, probably SQL, and probably running on an accompanying container described as a DockerFile.
 
-# Locking
+### Locking
 Since the database is rewritten on every POST, locking should be employed as a protection. Again, have I had more time, I would probably use a background thread consuming updates from a queue (synchronized) and batching update (for eventual consistency) or, of course, a real SQL database.
 
-# Testing
+### Testing
 I did some testing, as time permitted, manually. I didn't implement unit/automated tests.
 
-# Other
+### Other
 - The web server's database filename is `flights_database.csv` by default and can be changed by setting the environment variable `FLIGHTS_DATABASE_CSV_FILE`
 - FastAPI's server also include a documentation endpoint under `/docs` which is very nice to work with and documents the API
 - Schema validation is also done automatically
